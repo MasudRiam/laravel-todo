@@ -8,7 +8,7 @@ use Illuminate\View\Component;
 
 class Input extends Component
 {
-    public $msg = "abcd";
+    public $msg;
     /**
      * Create a new component instance.
      */
