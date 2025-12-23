@@ -8,7 +8,10 @@ class InputController extends Controller
 {
     //
     function inputF (Request $req) {
-       return $req;
+     $validated = $req->validate([
+        'username' => 'required',
+        'password' => 'required',
+     ]);
     }
 }
  
