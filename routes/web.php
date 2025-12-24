@@ -23,5 +23,7 @@ Route::post ('/form-submit', [InputController::class, 'inputF']);
 
 Route::get ('/user', [UserController::class, 'riam']);
 Route::get ('/user/{name}', [UserController::class, 'userName']);
-Route::get ('/admin', [UserController::class, 'admin']); 
+Route::get ('/admin', [UserController::class, 'admin']);
+ 
+Route::view ('/dashboard/admin', 'admin.dashboard')->middleware('web');
 
