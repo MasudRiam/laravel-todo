@@ -1,8 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+//Controllers
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\InputController;
+use App\Http\Controllers\DatabaseView;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,3 +30,4 @@ Route::get ('/admin', [UserController::class, 'admin']);
  
 Route::view ('/dashboard/admin', 'admin.dashboard')->middleware('web');
 
+Route::get ('/database-setup', [DatabaseView::class, 'databaseSet']);
