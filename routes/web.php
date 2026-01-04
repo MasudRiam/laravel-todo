@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\DatabaseView;
 use App\Http\Controllers\Winter;
+use App\Http\Controllers\UserAuth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,3 +34,5 @@ Route::view ('/dashboard/admin', 'admin.dashboard')->middleware('web');
 
 Route::get ('/database-setup', [DatabaseView::class, 'databaseSet']);
 Route::get ('/winter', [Winter::class, 'winter']);
+
+Route::get ('/auth/login', [UserAuth::class, 'login']);
